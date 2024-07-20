@@ -5,7 +5,10 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'filehelper.dart';
 
 class GalleryScreen extends StatefulWidget {
+  const GalleryScreen({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _GalleryScreenState createState() => _GalleryScreenState();
 }
 
@@ -29,9 +32,9 @@ class _GalleryScreenState extends State<GalleryScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Gallery'),
+          title: const Text('Gallery'),
           centerTitle: true,
-          backgroundColor: Colors.yellow,
+          backgroundColor:const Color.fromARGB(255, 208, 244, 45),
         ),
         body: SafeArea(
           child: StaggeredGridView.countBuilder(
@@ -44,7 +47,7 @@ class _GalleryScreenState extends State<GalleryScreen> {
               );
             },
             staggeredTileBuilder: (int index) {
-              return StaggeredTile.fit(2); // Adjust the tile size as needed
+              return const StaggeredTile.fit(1); // Adjust the tile size as needed
             },
           ),
         ));
